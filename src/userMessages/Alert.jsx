@@ -45,8 +45,8 @@ function Alert({
         <div role="alert" className="flex-grow-1">
           {children}
         </div>
+        {dismissible && <button className="close dismiss-button" onClick={onDismiss}>Dismiss</button>}
       </div>
-      {dismissible && <Button className="close" onClick={onDismiss}><FontAwesomeIcon size="sm" icon={faTimes} /></Button>}
     </div>
   );
 }
